@@ -194,6 +194,7 @@ button:active {
 
    .form-control img {
        height: 20px; width: 20px;
+       top: 23%;
    }
 
    .form button {
@@ -206,4 +207,12 @@ button:active {
    .terms { font-size: 10px; }
 
    .terms span { font-weight: 600; }
+}
+
+@media screen and (max-width: 485px) {
+    .form-control img { top: 18%; }
+}
+
+@media screen and (max-width: 390px) {
+    .form-control img { top: 16%; }
 }
