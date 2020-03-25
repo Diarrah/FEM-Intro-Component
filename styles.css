@@ -103,7 +103,8 @@ h1 {
     border: 2px solid hsl(154, 59%, 47%);
     box-shadow: none;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
+    margin-bottom: 15px;
     border-radius: 5px;
     letter-spacing: 2px;
 }
@@ -115,13 +116,9 @@ h1 {
    font-size: 11px;
 }
 
-.terms span {
-    color: var(--red);
-}
+.terms span { color: var(--red); }
 
-span {
-    font-weight: 700;
-}
+span { font-weight: 700; }
 
 button {
     font-family: inherit;
@@ -132,13 +129,11 @@ button {
     border: none;
     background-color: hsl(248, 32%, 49%);
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     cursor: pointer;
 }
 
-button:focus {
-    outline: none;
-}
+button:focus { outline: none; }
 
 button:active {
     transform: scale(.98);
@@ -160,9 +155,7 @@ button:active {
         font-size: 0.8rem;
     }
 
-    h1 {
-        font-size: 2.3rem;
-    }
+    h1 { font-size: 2.3rem; }
 
     .total-container {
         display: flex;
@@ -208,15 +201,9 @@ button:active {
        padding: 3% 0px;
    }
 
-   .right-half {
-       margin-bottom: 15vh;
-   }
+   .right-half { margin-bottom: 15vh; }
 
-   .terms {
-       font-size: 10px;
-   }
+   .terms { font-size: 10px; }
 
-   .terms span {
-       font-weight: 600;
-   }
+   .terms span { font-weight: 600; }
 }
