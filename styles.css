@@ -217,6 +217,10 @@ button:active {
         font-weight: 500;
     }
 
+    .form-control {
+        margin-bottom: 10px;
+    }
+
     .form input::placeholder {
         font-weight: 600;
         font-size: 1rem;
