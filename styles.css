@@ -210,9 +210,19 @@ button:active {
 }
 
 @media screen and (max-width: 485px) {
-    .form-control img { top: 18%; }
+    .form-control img { top: 17%; }
+    .form-control input { 
+        font-size: 0.8rem; 
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+
+    .form input::placeholder {
+        font-weight: 600;
+        font-size: 1rem;
+    }
 }
 
-@media screen and (max-width: 390px) {
-    .form-control img { top: 16%; }
+@media screen and (max-width: 412px) {
+    .form-control img { top: 13%; }
 }
