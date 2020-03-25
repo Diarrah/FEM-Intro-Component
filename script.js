@@ -1,8 +1,8 @@
 let form = document.querySelector('.form');
-let fName = document.querySelector('.fName');
-let lName = document.querySelector('.lName');
-let email = document.querySelector('.email');
-let password = document.querySelector('.password');
+let fName = document.getElementById('firstName');
+let lName = document.getElementById('lastName');
+let email = document.getElementById('email');
+let password = document.getElementById('password');
 
 
 form.addEventListener('submit', (e) => {
@@ -36,14 +36,14 @@ function checkInputs() {
 }
 
 function setError(input, message) {
-    let formControl = input.parentElement;
+    let formControl = input.parentElement.parentElement;
     let small = formControl.querySelector('small');
     formControl.className = 'form-control error';
     small.innerText = message;
 }
 
 function success(input) {
-    let formControl = input.parentElement;
+    let formControl = input.parentElement.parentElement;
     let small = formControl.querySelector('small');
     formControl.className = 'form-control';
     small.className = '';
