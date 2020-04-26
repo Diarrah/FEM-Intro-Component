@@ -1,8 +1,9 @@
-let form = document.querySelector('.form');
-let fName = document.getElementById('firstName');
-let lName = document.getElementById('lastName');
-let email = document.getElementById('email');
-let password = document.getElementById('password');
+let form = document.querySelector('.form'),
+    formControl = form.querySelectorAll('div'),
+    first = formControl[0].querySelector('input'),
+    last = formControl[1].querySelector('input'),
+    email = formControl[2].querySelector('input'),
+    password = formControl[3].querySelector('input');
 
 
 form.addEventListener('submit', (e) => {
@@ -11,42 +12,31 @@ form.addEventListener('submit', (e) => {
 })
 
 function checkInputs() {
-    let fNameVal = fName.value.trim();
-    let lNameVal = lName.value.trim();
-    let emailVal = email.value.trim();
-    let passwordVal = password.value.trim();
+    if (first.value.trim() === '') {
+        setError(first, 'First Name cannot be empty');
+    }  else { formControl[0].classList.remove('error') };
 
-    if (fNameVal === '') {
-        setError(fName, 'First Name cannot be empty');
-    }  else { success(fName) };
+    if (last.value.trim() === '') {
+        setError(last, 'Last Name cannot be empty');
+    } else { formControl[1].classList.remove('error') };
 
-    if (lNameVal === '') {
-        setError(lName, 'Last Name cannot be empty');
-    } else { success(lName) };
-
-    if (emailVal === '') {
+    if (email.value.trim() === '') {
         setError(email, 'Email cannot be empty')
-    } else if (!validateEmail(emailVal)) {
+    } else if (!validateEmail(email.value.trim())) {
         setError(email, 'Looks like this is not an email');
-    } else { success(email) }
+    } else { formControl[2].classList.remove('error') }
 
-    if (passwordVal === '') {
+    if (password.value.trim() === '') {
         setError(password, 'Password cannot be empty');
-    } else { success(password) };
+    } else { formControl[3].classList.remove('error') };
 }
 
 function setError(input, message) {
-    let formControl = input.parentElement.parentElement;
-    let small = formControl.querySelector('small');
-    formControl.className = 'form-control error';
-    small.innerText = message;
-}
+    let formControl = input.parentElement,
+        small = formControl.querySelector('small');
 
-function success(input) {
-    let formControl = input.parentElement.parentElement;
-    let small = formControl.querySelector('small');
-    formControl.className = 'form-control';
-    small.className = '';
+    formControl.classList.add('error')
+    small.innerText = message;
 }
 
 // Regex copied from Stack Overflow //
